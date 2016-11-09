@@ -6,9 +6,6 @@ import java.util.Properties;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-/**
- * Initialize all Services and Servlets.
- */
 public class ServerContext implements ServletContextListener {
 
 	public static String contextPath;

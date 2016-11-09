@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.util.Properties;
 
 import db.MySQLConnectionFactory;
-import db.ServerContext;
 import model.Device;
 import service.DeviceService;
 import service.MessageService;
@@ -15,7 +14,7 @@ public class Main {
 	static {
 		Properties boneCPConfigProperties = new Properties();
 		try {
-			boneCPConfigProperties.load(ServerContext.class.getResourceAsStream("/bonecp.properties"));
+			boneCPConfigProperties.load(Main.class.getResourceAsStream("/bonecp.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
