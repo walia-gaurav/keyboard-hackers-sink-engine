@@ -1,14 +1,14 @@
 package model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Message {
 
-	LocalDateTime messageTime;
+	Date messageTime;
 	String message;
 	String appName;
 
-	public Message(LocalDateTime messageTime, String appName, String message) {
+	public Message(Date messageTime, String appName, String message) {
 		this.messageTime = messageTime;
 		this.appName = appName;
 		this.message = message;

@@ -9,25 +9,35 @@
 	<description>A remote server that acts as a sink for getting all data from the key-presses of a device.</description>
 
 	<dependencies>
+		<!-- Java-MySql Connector -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.38</version>
 		</dependency>
+		<!-- Managing JDBC Connection Pool -->
 		<dependency>
 			<groupId>com.jolbox</groupId>
 			<artifactId>bonecp</artifactId>
 			<version>0.8.0.RELEASE</version>
 		</dependency>
+		<!-- JERSEY framework -->
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>2.22.1</version>
 		</dependency>
+		<!-- Explicit servlet dependency for ContextListener -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
+		</dependency>
+		<!-- For automatic JSON/POJO mappings. -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+			<version>2.24</version>
 		</dependency>
 	</dependencies>
 

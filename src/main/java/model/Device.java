@@ -1,36 +1,36 @@
 package model;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
-import utility.DeviceIdentifier;
+import utility.Helper;
 
 public class Device {
 
 	private final String idDevice;
-	private final LocalDateTime installationDate;
+	private final Date installationDate;
 	private final String token;
 
-	private LocalDateTime deleteDate;
+	private Date deleteDate;
 
-	public Device(String deviceId, LocalDateTime installationDate) {
+	public Device(String deviceId, Date installationDate) {
 		this.idDevice = deviceId;
 		this.installationDate = installationDate;
-		this.token = DeviceIdentifier.generateRandomTokenValue();
+		this.token = Helper.generateRandomTokenValue();
 	}
 
 	public String getIdDevice() {
 		return idDevice;
 	}
 
-	public LocalDateTime getInstallationDate() {
+	public Date getInstallationDate() {
 		return installationDate;
 	}
 
-	public LocalDateTime getDeleteDate() {
+	public Date getDeleteDate() {
 		return deleteDate;
 	}
 
-	public void setDeleteDate(LocalDateTime deleteDate) {
+	public void setDeleteDate(Date deleteDate) {
 		this.deleteDate = deleteDate;
 	}
 

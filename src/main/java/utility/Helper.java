@@ -2,9 +2,12 @@ package utility;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.UUID;
 
-public class DeviceIdentifier {
+public class Helper {
 
 	/**
 	 * Generates a random token value.
@@ -26,5 +29,21 @@ public class DeviceIdentifier {
 			stringBuilder.append(String.format("%02x", b & 0xff));
 		}
 		return stringBuilder.toString();
+	}
+
+	public static String toSQLDate(Date date) {
+		return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+	}
+
+	public static Date toJavaDate(String date) {
+		if (null == date) {
+			return null;
+		}
+		try {
+			return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
