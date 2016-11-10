@@ -1,15 +1,16 @@
 package driver;
 
 import java.io.IOException;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.Properties;
 
 import db.MySQLConnectionFactory;
-import model.Device;
-import service.DeviceService;
-import service.MessageService;
 
+/**
+ * ONLY FOR INTERNAL TESTING!
+ * 
+ * @author walia-mac
+ *
+ */
 public class Main {
 
 	static {
@@ -23,18 +24,41 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
+		//
+		// DeviceService.addDevice(new Device("mark.zuckerburg@facebook.com",
+		// Timestamp.valueOf(LocalDateTime.now())));
+		// DeviceService.addDevice(new Device("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now())));
+		//
+		// DeviceService.removeDevice("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()));
+		//
+		// DeviceService.getAll();
 
-		DeviceService.addDevice(new Device("gaurav.walia@andrew.cmu.edu", Timestamp.valueOf(LocalDateTime.now())));
-		DeviceService.addDevice(new Device("gaurav.walia@cmu.edu", Timestamp.valueOf(LocalDateTime.now())));
-
-		DeviceService.removeDevice("gaurav.walia@cmu.edu", Timestamp.valueOf(LocalDateTime.now()));
-
-		DeviceService.getAll();
-
-		MessageService.addMessage("gaurav.walia@cmu.edu", Timestamp.valueOf(LocalDateTime.now()), "Facebook",
-				"How are you");
-
-		System.out.println("done");
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Facebook",
+		// "How are you");
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Facebook",
+		// "Nice");
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Facebook",
+		// "Whats up");
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Facebook",
+		// "Cool");
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Facebook",
+		// "Goodnight");
+		// System.out.println("done");
+		//
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Gmail",
+		// "Dear Sir,");
+		// MessageService.addMessage("gaurav.walia@cmu.edu",
+		// Timestamp.valueOf(LocalDateTime.now()), "Gmail",
+		// "Hope you're doing good.");
+		// System.out.println("done");
 
 	}
 

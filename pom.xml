@@ -15,13 +15,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.38</version>
 		</dependency>
-		<!-- Managing JDBC Connection Pool -->
+		<!-- BONCE CP: Managing JDBC Connection Pool -->
 		<dependency>
 			<groupId>com.jolbox</groupId>
 			<artifactId>bonecp</artifactId>
 			<version>0.8.0.RELEASE</version>
 		</dependency>
-		<!-- JERSEY framework -->
+		<!-- JERSEY: rest-management-framework -->
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
@@ -33,7 +33,7 @@
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
 		</dependency>
-		<!-- For automatic JSON/POJO mappings. -->
+		<!-- JACKSON: For automatic JSON/POJO mappings. -->
 		<dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jackson</artifactId>

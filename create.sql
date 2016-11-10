@@ -19,7 +19,7 @@ CREATE TABLE `sink_engine`.`Device` (
 CREATE TABLE `sink_engine`.`Message` (
   `idMessage` INT NOT NULL AUTO_INCREMENT,
   `appName` VARCHAR(45) NULL,
-  `content` BLOB NULL,
+  `content` TEXT NULL,
   `timestamp` DATETIME NULL,
   `idDevice` VARCHAR(45) NULL,
   PRIMARY KEY (`idMessage`),
@@ -29,3 +29,6 @@ CREATE TABLE `sink_engine`.`Message` (
     REFERENCES `sink_engine`.`Device` (`idDevice`)
     ON DELETE CASCADE
     ON UPDATE CASCADE);
+    
+    
+    

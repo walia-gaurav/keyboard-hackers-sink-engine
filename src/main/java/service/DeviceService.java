@@ -18,26 +18,22 @@ public class DeviceService {
 	private static final String REMOVE_QUERY = "UPDATE Device SET deleteDate = ? WHERE idDevice = ?;";
 	private static final String GET_ALL_QUERY = "SELECT * FROM Device;";
 
-	public static void addDevice(Device device) {
+	public static void addDevice(Device device) throws SQLException {
 		try (Connection connection = MySQLConnectionFactory.getConnection()) {
 			PreparedStatement preparedStatement = connection.prepareStatement(ADD_QUERY);
 			preparedStatement.setString(1, device.getIdDevice());
 			preparedStatement.setString(2, Helper.toSQLDate(device.getInstallationDate()));
 			preparedStatement.setString(3, Helper.generateRandomTokenValue());
 			preparedStatement.execute();
-		} catch (SQLException ex) {
-			ex.printStackTrace();
 		}
 	}
 
-	public static void removeDevice(String idDevice, Date deleteDate) {
+	public static void removeDevice(String idDevice, Date deleteDate) throws SQLException {
 		try (Connection connection = MySQLConnectionFactory.getConnection()) {
 			PreparedStatement preparedStatement = connection.prepareStatement(REMOVE_QUERY);
 			preparedStatement.setString(1, Helper.toSQLDate(deleteDate));
 			preparedStatement.setString(2, idDevice);
 			preparedStatement.executeUpdate();
-		} catch (SQLException ex) {
-			ex.printStackTrace();
 		}
 	}
 
@@ -54,8 +50,8 @@ public class DeviceService {
 
 				devices.add(device);
 			}
-		} catch (SQLException ex) {
-			ex.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return devices;
 	}
