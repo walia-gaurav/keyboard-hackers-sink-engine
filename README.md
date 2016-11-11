@@ -7,7 +7,7 @@
 
 ## Build the project
 1. After cloning or downloading the project, run **mvn clean install** on the project base directory.
-2. This will compile the code, and package it into a web archive (popularly knowns as .war)
+2. This will compile the code, and package it into a web archive (popularly known as .war)
 
 ## Set up a web server
 1. Download a light-weight web server. Preferably Jetty! (jetty-distribution-9.3.5.v20151012)
