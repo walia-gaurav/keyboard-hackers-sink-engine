@@ -1,5 +1,5 @@
 /* Drop any previous instances of the database */
-DROP DATABASE sink_engine;
+DROP DATABASE IF EXISTS sink_engine;
 
 /* Creates a fresh database */
 CREATE DATABASE sink_engine;
