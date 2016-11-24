@@ -30,7 +30,7 @@ public class MySQLConnectionFactory {
 
 			config.setUser(boneCPConfigProperties.getProperty("username"));
 			config.setPassword(boneCPConfigProperties.getProperty("password"));
-			config.setJdbcUrl(boneCPConfigProperties.getProperty("jdbcUrl") + "?autoReconnect=true&useSSL=false");
+			config.setJdbcUrl(boneCPConfigProperties.getProperty("jdbcUrl") + "?autoReconnect=true");
 			config.setMinConnectionsPerPartition(
 					Integer.parseInt(boneCPConfigProperties.getProperty("minConnectionsPerPartition")));
 			config.setMaxConnectionsPerPartition(
