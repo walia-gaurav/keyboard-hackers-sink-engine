@@ -3,10 +3,7 @@ var settings = {
   "async": true,
   "crossDomain": true,
   "url": "http://localhost:8080/api/devices",
-  "method": "GET",
-  "headers": {
-    "cache-control": "no-cache"
-  }
+  "method": "GET"
 }
 
 $.ajax(settings).done(function (response) {
@@ -22,7 +19,6 @@ var settings = {
   "method": "PUT",
   "headers": {
     "content-type": "application/x-www-form-urlencoded",
-    "cache-control": "no-cache"
   },
   "data": {
     "deviceId": "jeff.bezos@amazon.com",
@@ -43,7 +39,6 @@ var settings = {
   "method": "POST",
   "headers": {
     "content-type": "application/x-www-form-urlencoded",
-    "cache-control": "no-cache"
   },
   "data": {
     "deviceId": "jeff.bezos@amazon.com",
@@ -64,7 +59,6 @@ var settings = {
   "method": "POST",
   "headers": {
     "content-type": "application/x-www-form-urlencoded",
-    "cache-control": "no-cache"
   },
   "data": {
     "deviceId": "jeff.bezos@amazon.com",
@@ -84,10 +78,7 @@ var settings = {
   "async": true,
   "crossDomain": true,
   "url": "http://localhost:8080/api/messages/distinctApps/gaurav.walia@cmu.edu",
-  "method": "GET",
-  "headers": {
-    "cache-control": "no-cache"
-  }
+  "method": "GET"
 }
 
 $.ajax(settings).done(function (response) {
@@ -100,10 +91,7 @@ var settings = {
   "async": true,
   "crossDomain": true,
   "url": "http://localhost:8080/api/messages/gaurav.walia@cmu.edu",
-  "method": "GET",
-  "headers": {
-    "cache-control": "no-cache"
-  }
+  "method": "GET"
 }
 
 $.ajax(settings).done(function (response) {
@@ -116,10 +104,7 @@ var settings = {
   "async": true,
   "crossDomain": true,
   "url": "http://localhost:8080/api/messages/gaurav.walia@cmu.edu/gmail",
-  "method": "GET",
-  "headers": {
-    "cache-control": "no-cache"
-  }
+  "method": "GET"
 }
 
 $.ajax(settings).done(function (response) {
