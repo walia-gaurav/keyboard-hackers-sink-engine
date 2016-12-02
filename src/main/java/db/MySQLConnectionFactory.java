@@ -28,9 +28,16 @@ public class MySQLConnectionFactory {
 		try {
 			BoneCPConfig config = new BoneCPConfig();
 
-			config.setUser(boneCPConfigProperties.getProperty("username"));
-			config.setPassword(boneCPConfigProperties.getProperty("password"));
-			config.setJdbcUrl(boneCPConfigProperties.getProperty("jdbcUrl") + "?autoReconnect=true");
+			if (Boolean.valueOf(boneCPConfigProperties.getProperty("prod")).equals(Boolean.TRUE)) {
+				config.setUser(boneCPConfigProperties.getProperty("prod.username"));
+				config.setPassword(boneCPConfigProperties.getProperty("prod.password"));
+				config.setJdbcUrl(boneCPConfigProperties.getProperty("prod.jdbcUrl") + "?autoReconnect=true");
+			} else {
+				config.setUser(boneCPConfigProperties.getProperty("dev.username"));
+				config.setPassword(boneCPConfigProperties.getProperty("dev.password"));
+				config.setJdbcUrl(boneCPConfigProperties.getProperty("dev.jdbcUrl") + "?autoReconnect=true");
+			}
+
 			config.setMinConnectionsPerPartition(
 					Integer.parseInt(boneCPConfigProperties.getProperty("minConnectionsPerPartition")));
 			config.setMaxConnectionsPerPartition(
