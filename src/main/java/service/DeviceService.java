@@ -16,7 +16,7 @@ public class DeviceService {
 
 	private static final String ADD_QUERY = "INSERT INTO Device VALUES (?,?, NULL, ?);";
 	private static final String REMOVE_QUERY = "UPDATE Device SET deleteDate = ? WHERE idDevice = ?;";
-	private static final String GET_ALL_QUERY = "SELECT * FROM Device;";
+	private static final String GET_ALL_QUERY = "SELECT * FROM Device ORDER BY installationDate DESC;";
 
 	public static void addDevice(Device device) throws SQLException {
 		try (Connection connection = MySQLConnectionFactory.getConnection()) {
